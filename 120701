@@ -1,0 +1,65 @@
+120701.主类.App.java
+public class App {
+	public static void main(String[] args) {
+		int array[][]={
+				{1,2,3,4,5,6},{7,8,9,10,0,12},{8,8,9,10,11,12},{7,8,3,10,11,12},{88,66,92,102,151,999}
+		};
+		
+		new Find().fin(array);
+		new Find().fin2(array);
+		new Find().fin3(array);
+		new Find().fin4(array);
+		new Find().fin5(array);
+	}
+
+}
+
+120701.寻找0的相邻坐标.Find.java
+public class Find {
+	void fin(int array[][]){
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[0].length; j++) {
+				if (array[i][j]==0) {
+					System.out.println("R_zero("+j+","+i+")");
+				}
+			}
+		}
+	}
+	void fin2(int array[][]){
+		for (int i2 = 0; i2 < array.length; i2++) {
+			for (int j2 = 0; j2 < array[0].length; j2++) {
+				if (array[i2][j2]==5) {
+					System.out.println("R_up("+j2+","+i2+")");
+				}
+			}
+		}
+	}
+	void fin3(int array[][]){
+		for (int i2 = 0; i2 < array.length; i2++) {
+			for (int j2 = 0; j2 < array[0].length; j2++) {
+				if (array[i2][j2]==10) {
+					System.out.println("R_left("+j2+","+i2+")");
+				}
+			}
+		}
+	}
+	void fin4(int array[][]){
+		for (int i2 = 0; i2 < array.length; i2++) {
+			for (int j2 = 0; j2 < array[0].length; j2++) {
+				if (array[i2][j2]==12) {
+					System.out.println("R_right("+j2+","+i2+")");
+				}
+			}
+		}
+	}
+	void fin5(int array[][]){
+		for (int i2 = 0; i2 < array.length; i2++) {
+			for (int j2 = 0; j2 < array[0].length; j2++) {
+				if (array[i2][j2]==11) {
+					System.out.println("R_down("+j2+","+i2+")");
+				}
+			}
+		}
+	}
+
+}
