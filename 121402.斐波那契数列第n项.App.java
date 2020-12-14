@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 System.out.println("用户输入:");
@@ -10,15 +9,16 @@ public class App {
 	}
 
 	private static int ValueN(int n) {
-		if(n<1){
-	          return 0;
-	      }
-	      if(n==1 || n==2){
-	          return 1;
-	      }
-	       int [][] base={{1,1},{1,0}};
-	       int [][] res=matrixPower(base,n-2);//斐波那契数列（F（n），F（n-1））为（1，1）与{{1,1},{1,0}}的n-2次幂的乘积
-	       return res[0][0]+res[1][0];
+			if(n<1||n>40){
+		          return 0;
+		      }
+		      if(n==1 || n==2){
+		          return 1;
+		      }
+		       int [][] base={{1,1},{1,0}};
+		       int [][] res=matrixPower(base,n-2);//斐波那契数列（F（n），F（n-1））为（1，1）与{{1,1},{1,0}}的n-2次幂的乘积
+		       return res[0][0]+res[1][0];	
+		
 	}
 
 	private static int[][] matrixPower(int[][] m, int p) {
@@ -46,3 +46,4 @@ public class App {
         return res;
 	}
 }
+		
