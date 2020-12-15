@@ -1,9 +1,10 @@
 public class App {
 	public static void main(String[] args) {
 		//121401.奇数求和.App.java  
-		int i = 1;
-		int sum = 0;
-		while (i <= 2147483647){
+		long i = 1L;
+		long sum = 0L;
+		long big=2147483647L;
+		while (i <= big){
 	        if (i % 2 == 1){
 	            sum = sum + i;
 	        }
@@ -13,3 +14,4 @@ public class App {
 	}
 
 	}
+
